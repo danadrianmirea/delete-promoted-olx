@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Delete promoted posts on Olx
+// @name         Delete promoted posts on olx
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Deletes pomoted posts on Olx
+// @description  Deletes pomoted posts on olx
 // @author       Dan Adrian Mirea
 // @match        https://*.olx.ro/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=linkedin.com
