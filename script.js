@@ -5,7 +5,6 @@
 // @description  Deletes pomoted posts on olx
 // @author       Dan Adrian Mirea
 // @match        https://*.olx.ro/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=linkedin.com
 // @grant        none
 // ==/UserScript==
 
