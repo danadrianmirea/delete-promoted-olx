@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Delete promoted posts on OLX
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Deletes promoted posts on OLX
 // @author       Dan Adrian Mirea
 // @match        https://*.olx.ro/*
 // @grant        none
+// @updateURL    https://raw.githubusercontent.com/danadrianmirea/delete-promoted-olx/main/delete-promoted-olx.user.js
+// @downloadURL  https://raw.githubusercontent.com/danadrianmirea/delete-promoted-olx/main/delete-promoted-olx.user.js
 // ==/UserScript==
 
 (function() {
@@ -29,7 +31,7 @@
         });
     }
 
-      var intervalId = window.setInterval(function(){
+    var intervalId = window.setInterval(function(){
         deletePromotedEntries();
     }, 1000);
 
