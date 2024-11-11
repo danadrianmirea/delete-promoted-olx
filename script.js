@@ -11,7 +11,6 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
 
     function deletePromotedEntries() {
         var top_add = document.getElementById("div-gpt-ad-listing-sponsored-ad-first");
