@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Delete promoted posts on olx
+// @name         Delete promoted posts on OLX
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Deletes pomoted posts on olx
+// @description  Deletes promoted posts on OLX
 // @author       Dan Adrian Mirea
 // @match        https://*.olx.ro/*
 // @grant        none
@@ -10,22 +10,27 @@
 
 (function() {
     'use strict';
+
     function deletePromotedEntries() {
-        var posts = document.querySelectorAll(".css-1sw7q4x");
-        let i = 0;
-        while (i < posts.length) {
-            if(posts[i].textContent.toLowerCase().includes("promo"))
-            {
-                //posts[i].style.opacity = 0.2;
-                posts[i].remove();
-            }
-            i++;
+        var top_add = document.getElementById("div-gpt-ad-listing-sponsored-ad-first");
+        if (top_add) {
+            top_add.remove();
         }
+
+        const allElements = document.querySelectorAll('*');
+        const posts = Array.from(allElements).filter(element =>
+            Array.from(element.attributes).some(attr =>
+            attr.value.includes("card") || attr.value.includes("qa-advert-slot")));
+
+        posts.forEach((post) => {
+            if (post.textContent.toLowerCase().includes("promo")) {
+                post.remove();
+            }
+        });
     }
 
-    var intervalId = window.setInterval(function(){
+      var intervalId = window.setInterval(function(){
         deletePromotedEntries();
     }, 1000);
-
 
 })();
