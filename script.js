@@ -20,7 +20,7 @@
         const allElements = document.querySelectorAll('*');
         const posts = Array.from(allElements).filter(element =>
             Array.from(element.attributes).some(attr =>
-            attr.value.includes("card") || attr.value.includes("qa-advert-slot")));
+            attr.value.includes("card") || attr.value.includes("advert")));
 
         posts.forEach((post) => {
             if (post.textContent.toLowerCase().includes("promo")) {
