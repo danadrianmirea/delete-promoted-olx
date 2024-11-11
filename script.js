@@ -6,8 +6,8 @@
 // @author       Dan Adrian Mirea
 // @match        https://*.olx.ro/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/danadrianmirea/delete-promoted-olx/main/delete-promoted-olx.user.js
-// @downloadURL  https://raw.githubusercontent.com/danadrianmirea/delete-promoted-olx/main/delete-promoted-olx.user.js
+// @updateURL    https://raw.githubusercontent.com/danadrianmirea/delete-promoted-olx/main/script.js
+// @downloadURL  https://raw.githubusercontent.com/danadrianmirea/delete-promoted-olx/main/script.js
 // ==/UserScript==
 
 (function() {
