@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Delete promoted posts on OLX
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  Deletes promoted posts on OLX
 // @author       Dan Adrian Mirea
 // @match        https://*.olx.ro/*
@@ -30,8 +30,10 @@
         });
     }
 
-    var intervalId = window.setInterval(function(){
-        deletePromotedEntries();
-    }, 1000);
+    window.onload = function() {
+        var intervalId = window.setInterval(function(){
+            deletePromotedEntries();
+        }, 1000);
+    };
 
 })();
